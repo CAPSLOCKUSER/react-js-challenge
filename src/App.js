@@ -48,7 +48,7 @@ class App extends Component {
   render() {
     return (
       <Card style={styles.container}>
-        <Tabs style={styles.tabs}>
+        <Tabs>
           <Tab label="Form" >
             <FormBody tab="form" />
           </Tab>

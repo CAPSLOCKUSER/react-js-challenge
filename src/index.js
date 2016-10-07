@@ -13,7 +13,11 @@ const muiTheme = getMuiTheme({
     primary1Color: '#288DEE',
     accent1Color: '#134294',
     canvasColor: '#f6f4f5',
-  }
+  },
+  tabs: {
+    textColor: 'white',
+    selectedTextColor: '#134294',
+  },
 });
 
 const app = (
