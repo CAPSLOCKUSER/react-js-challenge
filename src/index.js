@@ -22,7 +22,7 @@ const muiTheme = getMuiTheme({
 });
 
 const app = (
-  <BrowserRouter>
+  <BrowserRouter basename="/react-js-challenge">
     <MuiThemeProvider muiTheme={muiTheme}>
       <App />
     </MuiThemeProvider>
