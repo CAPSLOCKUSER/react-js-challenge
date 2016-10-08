@@ -6,13 +6,23 @@ import FormBody from './FormBody';
 
 const styles = {
   container: {
-    width: 400,
+    width: 375,
     minHeight: 360,
     margin: '30px auto',
   },
 };
 
 class App extends Component {
+  state = {
+    name: '',
+    company: '',
+    toggle: false,
+  };
+  handleChange = (field, valueField = 'value') => event => {
+    this.setState({
+      [field]: event.target[valueField],
+    });
+  };
   render() {
     const tabsContent = ['form', 'review', 'final'].map((type, index) => (
       <Tab
@@ -21,7 +31,11 @@ class App extends Component {
         value={type === 'form' ? '' : type}
         disabled={true}
       >
-        <FormBody tab={type} />
+        <FormBody
+          tab={type}
+          form={this.state}
+          onChange={this.handleChange}
+        />
       </Tab>
     ));
     return (
