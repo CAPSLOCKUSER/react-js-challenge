@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from './App';
 import './index.css';
 
@@ -21,9 +22,11 @@ const muiTheme = getMuiTheme({
 });
 
 const app = (
-  <MuiThemeProvider muiTheme={muiTheme}>
-    <App />
-  </MuiThemeProvider>
+  <BrowserRouter>
+    <MuiThemeProvider muiTheme={muiTheme}>
+      <App />
+    </MuiThemeProvider>
+  </BrowserRouter>
 );
 
 ReactDOM.render(app, document.getElementById('root'));
